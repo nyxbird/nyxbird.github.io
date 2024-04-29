@@ -37,7 +37,7 @@ function render(time) {
 }
 
 // hook onto existing onload
-let onload = window.onload;
+let onload = window.onload??(()=>{});
 window.onload=()=>{
     onload();
     canvas = document.getElementById("bg");

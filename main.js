@@ -1,8 +1,6 @@
-window.onload = regrid;
-
 let COL_NUM = 3;
 let COL_ROOM = 100;
-let COL_THRESH = 800;
+let COL_THRESH = 600;
 
 let tag_colors = {
     "dev": "#adb",
@@ -71,6 +69,7 @@ function clear_grid() {
 }
 
 function fill_grid() {
+    console.log("!");
     const params = new URLSearchParams(window.location.search);
     let req = box=>{return true};
     if(params.has("tag")) {
@@ -100,16 +99,18 @@ function fill_grid() {
 }
 
 function regrid() {
-    if(window.innerWidth < COL_THRESH * COL_NUM) {
+    if(window.innerWidth < COL_THRESH * COL_NUM && COL_NUM > 1) {
         COL_NUM = Math.floor(window.innerWidth/COL_THRESH);
         clear_grid();
         fill_grid();
     }
-    if(window.innerWidth > COL_THRESH * COL_NUM) {
+    if(window.innerWidth > COL_THRESH * (COL_NUM+1)) {
         COL_NUM = Math.floor(window.innerWidth/COL_THRESH);
         clear_grid();
         fill_grid();
     }
 }
 
+
+addEventListener("load", ()=>{fill_grid(); regrid();});
 addEventListener("resize", regrid);
