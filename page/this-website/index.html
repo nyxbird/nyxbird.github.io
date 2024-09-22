@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this very website! | nyxbird</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <!-- <script src="../../boxes.js"></script>
+    <script src="../../main.js"></script> -->
+    <script src="../../shader/shader.js"></script>
+    <script src="../../shader/bg.js"></script>
+</head>
+<body>
+    <canvas id="bg"></canvas>
+    <div class="outerpage">
+        <div class="innerpage">
+            <p class="boxtitle">this very website!</p>
+            <hr>
+            <br>
+            <p class="subtitle">the shader</p>
+            <p>
+                recently i've been toying around with shaders (mostly on shadertoy)
+                and i decided to spice up this site with one! for posterity's sake,
+                the background of the site (as of me writing this) is a set of purple
+                and pink metaballs making a sort of space-y effect.
+                <br><br>
+                the shader has a set of positive and negative points at pseudorandom positions,
+                and calculates the sum of the inverse squares of the distance to each point
+                from each pixel (adding positive points and subtracting negative ones), and then
+                colors the pixel based on the sum. the coloring is in bands rather than continuous,
+                so each point has three rings around it, with the innermost being the brightest
+                and the outermost being the darkest.
+                <br><br>
+                the shader is also interactive! (unless you're on mobile, sorry.) each pixel's distance value
+                is multiplied by a factor based on the square root of the distance to the mouse, so
+                mousing over a point will cause it to shrink and seperate, while distancing the mouse
+                from it makes it grow brighter.
+            </p>
+            <br>
+            <p class="subtitle">the boxes</p>
+            <p>
+                the other (and more important) big change i've made is my organization system.
+                before, i just had a list with links to all of the other pages, but now i have
+                a <em>grid</em>! the homepage is now a grid (sort of) with boxes that link to all
+                the other pages. plus, all of the boxes have tags that make it easier to find
+                certain kinds of projects.
+                <br><br>
+            </p>
+            <p class="subtitle">the end</p>
+            <p>
+                i'm fairly comfortable with how the website is, but i'm sure i'll have another
+                renevation at some point (for either practical or aesthetic reasons). until then i'll
+                try and clean this one up.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

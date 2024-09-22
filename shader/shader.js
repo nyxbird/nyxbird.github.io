@@ -54,27 +54,13 @@ void mainImage(out vec4 col, in vec2 pos) {
     
     float xhigh = 10., high = 5., low = 1.5;
     
-    if(a>=xhigh) {
-        col = vec4(.25, .1, .55, 1.);
-    }
-    else if(a>=high) {
-        col = vec4(.2, .1, .4, 1.);
-    }
-    else if(a>=low) {
-        col = vec4(.15, .1, .25, 1.);
-    }
-    else if(a>=-low) {
-        col = vec4(.1, .1, .1, 1.);
-    }
-    else if(a>=-high) {
-        col = vec4(.2, .1, .2, 1.);
-    }
-    else if(a>=-xhigh) {
-        col = vec4(.3, .1, .3, 1.);
-    }
-    else {
-        col = vec4(.4, .1, .4, 1.);
-    }
+    if(a>=xhigh) {col = vec4(.25, .1, .55, 1.);}
+    else if(a>=high) {col = vec4(.2, .1, .4, 1.);}
+    else if(a>=low) {col = vec4(.15, .1, .25, 1.);}
+    else if(a>=-low) {col = vec4(.1, .1, .1, 1.);}
+    else if(a>=-high) {col = vec4(.2, .1, .2, 1.);}
+    else if(a>=-xhigh) {col = vec4(.3, .1, .3, 1.);}
+    else {col = vec4(.4, .1, .4, 1.);}
 }
 
 void main() {

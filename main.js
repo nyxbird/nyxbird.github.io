@@ -8,7 +8,8 @@ let tag_colors = {
     "fun": "#dba",
     "sol": "#cca",
     "art": "#bad",
-    "cpp": "#ccc"
+    "cpp": "#ccc",
+    "wip": "#aaa"
 }
 
 function tag_link(tag) {
@@ -20,6 +21,7 @@ function make_box(box) {
     b.setAttribute("class", "box");
 
     if(box.link) {
+        b.setAttribute("class", b.getAttribute("class")+" clickable");
         b.setAttribute("href", box.link);
     }
 

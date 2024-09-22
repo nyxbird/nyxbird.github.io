@@ -1,5 +1,5 @@
 // shaders!!! yayyyy!!!!
-let canvas, gl;
+let canvas, ctx, gl;
 let loaded = false;
 let mouse = {x:0, y:0};
 
@@ -18,22 +18,25 @@ function mousemove(e) {
 }
 
 function render(time) {
-    time *= 0.0001;
+    // if(0) {
+        if(gl) {
+        time *= 0.0001;
 
-    resize();
-    gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
-    gl.useProgram(program);
+        resize();
+        gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
+        gl.useProgram(program);
 
-    gl.enableVertexAttribArray(a_pos);
-    gl.bindBuffer(gl.ARRAY_BUFFER, pos_buffer);
-    
-    gl.vertexAttribPointer(a_pos, 2, gl.FLOAT, false, 0, 0);
-    gl.uniform2f(u_res, gl.canvas.width, gl.canvas.height);
-    gl.uniform2f(u_mouse, mouse.x, mouse.y);
-    gl.uniform1f(u_time, time+time_off);
+        gl.enableVertexAttribArray(a_pos);
+        gl.bindBuffer(gl.ARRAY_BUFFER, pos_buffer);
+        
+        gl.vertexAttribPointer(a_pos, 2, gl.FLOAT, false, 0, 0);
+        gl.uniform2f(u_res, gl.canvas.width, gl.canvas.height);
+        gl.uniform2f(u_mouse, mouse.x, mouse.y);
+        gl.uniform1f(u_time, time+time_off);
 
-    gl.drawArrays(gl.TRIANGLES, 0, 6);
-    requestAnimationFrame(render);
+        gl.drawArrays(gl.TRIANGLES, 0, 6);
+        requestAnimationFrame(render);
+    }
 }
 
 // hook onto existing onload
@@ -42,6 +45,7 @@ window.onload=()=>{
     onload();
     canvas = document.getElementById("bg");
     // resize();
+    // ctx = canvas.getContext("2d");
     gl = canvas.getContext("webgl");
 
     window.addEventListener("mousemove", mousemove);
