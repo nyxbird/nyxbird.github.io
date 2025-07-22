@@ -5,10 +5,10 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "msedge",
+            "type": "chrome",
             "request": "launch",
-            "name": "Launch Edge against localhost",
-            "file": "${workspaceFolder}/index.html"
+            "name": "Open index.html",
+            "file": "c:\\Code\\web\\nyxbird.github.io\\index.html"
         }
     ]
 }

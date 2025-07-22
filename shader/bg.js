@@ -2,6 +2,8 @@
 let canvas, ctx, gl;
 let loaded = false;
 let mouse = {x:0, y:0};
+let ripple = {x:0, y:0};
+let last_time = 0;
 
 // shader vars
 let program, pos_buffer;
@@ -17,10 +19,17 @@ function mousemove(e) {
     mouse = {x:e.clientX, y:gl.canvas.height-e.clientY};
 }
 
+function update_ripple(dt) {
+    ripple.x = ripple.x*.9+mouse.x*.1;
+    ripple.y = ripple.y*.9+mouse.y*.1;
+    // ripple.x = ripple.x/2+mouse.x/2;
+    // ripple.y = ripple.y/2+mouse.y/2;
+}
+
 function render(time) {
     // if(0) {
-        if(gl) {
-        time *= 0.0001;
+    if(gl) {
+        let dt = time-last_time;
 
         resize();
         gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
@@ -31,10 +40,13 @@ function render(time) {
         
         gl.vertexAttribPointer(a_pos, 2, gl.FLOAT, false, 0, 0);
         gl.uniform2f(u_res, gl.canvas.width, gl.canvas.height);
-        gl.uniform2f(u_mouse, mouse.x, mouse.y);
-        gl.uniform1f(u_time, time+time_off);
+        // gl.uniform2f(u_mouse, mouse.x, mouse.y);
+        update_ripple(dt);
+        gl.uniform2f(u_mouse, ripple.x, ripple.y);
+        gl.uniform1f(u_time, time*0.0001+time_off);
 
         gl.drawArrays(gl.TRIANGLES, 0, 6);
+        last_time = time;
         requestAnimationFrame(render);
     }
 }

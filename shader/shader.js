@@ -61,6 +61,9 @@ void mainImage(out vec4 col, in vec2 pos) {
     else if(a>=-high) {col = vec4(.2, .1, .2, 1.);}
     else if(a>=-xhigh) {col = vec4(.3, .1, .3, 1.);}
     else {col = vec4(.4, .1, .4, 1.);}
+
+    if(length(iMouse.xy/iResolution.yy-st) < 0.013+0.005*sin(iTime*10.)) {col += vec4(.2, .2, .15, 0.);}
+    else if(length(iMouse.xy/iResolution.yy-st) < 0.03+0.005*sin(iTime*atan(1.)*10.)) {col += vec4(.1, .1, .05, 0.);}
 }
 
 void main() {
@@ -77,7 +80,6 @@ function createShader(gl, type, source) {
     if (success) {
       return shader;
     }
-   
     console.log(gl.getShaderInfoLog(shader));
     gl.deleteShader(shader);
 }
