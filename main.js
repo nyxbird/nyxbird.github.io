@@ -71,7 +71,6 @@ function clear_grid() {
 }
 
 function fill_grid() {
-    console.log("!");
     const params = new URLSearchParams(window.location.search);
     let req = box=>{return true};
     if(params.has("tag")) {
@@ -84,7 +83,6 @@ function fill_grid() {
     }
 
     let grid = document.getElementById("boxgrid");
-    // alert(grid);
     for(let i = 0; i < COL_NUM; ++i) {
         let col = document.createElement("div");
         col.setAttribute("class", "boxcol");
@@ -103,6 +101,7 @@ function fill_grid() {
 function regrid() {
     if(window.innerWidth < COL_THRESH * COL_NUM && COL_NUM > 1) {
         COL_NUM = Math.floor(window.innerWidth/COL_THRESH);
+        COL_NUM = Math.max(COL_NUM, 1);
         clear_grid();
         fill_grid();
     }
