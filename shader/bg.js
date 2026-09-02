@@ -1,4 +1,3 @@
-// shaders!!! yayyyy!!!!
 let canvas, ctx, gl;
 let loaded = false;
 let mouse = {x:0, y:0};

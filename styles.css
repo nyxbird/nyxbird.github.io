@@ -11,7 +11,11 @@
     --text: #f8f0ff;
 
     --tags: #bbb;
-    --box-bg: #fff1;
+    --box-bg: #fff4;
+}
+
+#h1 {
+    text-align:center;
 }
 
 a {
@@ -34,6 +38,19 @@ body {
     display:block;
     z-index: -1;
     overflow: hidden;
+}
+
+.page {
+    margin: 2vw auto 2vw;
+    display:flex;
+    /* align-items: center; */
+    justify-content: space-evenly;
+    width: 80vw;
+    background-color: var(--bg2);
+    border-radius: 40px;
+    gap: 1vw;
+    padding: 1vw;
+    /* min-height: 100vw; */
 }
 
 #boxgrid {

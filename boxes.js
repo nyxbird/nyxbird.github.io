@@ -1,9 +1,23 @@
 let boxes = [
     {
+        title: "harmonies",
+        blurb: "a tile-laying game for the terminal",
+        tags: ["fun", "dev", "rst"],
+        link: "https://github.com/nyxbird/harmonies"
+    },
+
+    {
+        title: "kohaku",
+        blurb: "a game about building koi ponds",
+        tags: ["fun", "dev", "web"],
+        link: "https://github.com/nyxbird/kohakubga"
+    },
+
+    {
         title: "stellarion",
-        image: "imgs/stellarion.png",
+        // image: "imgs/stellarion.png",
         blurb: "the spaciest oniverse game",
-        tags: ["fun", "sol", "dev", "web"],
+        tags: ["fun", "dev", "web"],
         link: "https://nyxbird.github.io/stellarion"
     },
 
@@ -21,28 +35,28 @@ let boxes = [
         link: "./page/this-website/"
     },
 
-    {
-        title: "fortune's foundation",
-        blurb: "another zachtronics solitaire port. yay!",
-        tags: ["fun", "sol", "dev", "web", "wip"]
-    },
+    // {
+    //     title: "fortune's foundation",
+    //     blurb: "another zachtronics solitaire port. yay!",
+    //     tags: ["fun", "sol", "dev", "web", "wip"]
+    // },
 
-    {
-        title: "webzhen",
-        blurb: "shenzhen solitaire! on the web!",
-        tags: ["fun", "sol", "dev", "web", "wip"]
-    },
+    // {
+    //     title: "webzhen",
+    //     blurb: "shenzhen solitaire! on the web!",
+    //     tags: ["fun", "sol", "dev", "web", "wip"]
+    // },
 
-    {
-        title: "voice synth",
-        blurb: "(ongoing) a voice synthesizer based on klatt's cascade/parallel formant synthesizer",
-        tags: ["dev", "cpp", "wip"]
-    },
+    // {
+    //     title: "voice synth",
+    //     blurb: "(ongoing) a voice synthesizer based on klatt's cascade/parallel formant synthesizer",
+    //     tags: ["dev", "cpp", "wip"]
+    // },
 
     {
         title: "metaballs!",
-        image: "imgs/metaballs.png",
-        tags: ["dev", "web", "art"],
+        // image: "imgs/metaballs.png",
+        tags: ["dev", "web"],
         blurb: "rendering metaballs on the js canvas",
         link: "https://nyxbird.github.io/metaballs"
     },
@@ -57,14 +71,14 @@ let boxes = [
     {
         title: "shenzhen solitaire",
         blurb: "a c++/sdl implementation of shenzhen solitaire",
-        tags: ["fun", "sol", "dev", "cpp"],
+        tags: ["fun", "dev", "cpp"],
         link: "https://github.com/nyxbird/shenzhen"
     },
 
-    {
-        title: "klondike solitaire",
-        blurb: "a c++/sdl implementation of klondike solitaire",
-        tags: ["fun", "sol", "dev", "cpp"],
-        // link: "https://nyxbird.github.io/projects/klondike"
-    }
+    // {
+    //     title: "klondike solitaire",
+    //     blurb: "a c++/sdl implementation of klondike solitaire",
+    //     tags: ["fun", "sol", "dev", "cpp"],
+    //     link: "https://nyxbird.github.io/projects/klondike"
+    // }
 ];

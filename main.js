@@ -5,8 +5,9 @@ let COL_THRESH = 600;
 let tag_colors = {
     "dev": "#adb",
     "web": "#abd",
-    "fun": "#dba",
-    "sol": "#cca",
+    "rst": "#dba",
+    // "fun": "#dba",
+    "fun": "#cca",
     "art": "#bad",
     "cpp": "#ccc",
     "wip": "#aaa"
