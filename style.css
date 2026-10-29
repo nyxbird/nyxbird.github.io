@@ -1,14 +1,45 @@
 :root {
-   --bg0: #112;
-   --bg1: #324;
-   --bg2: #537; 
+   --bg: #232323 
+   --p0: #403463
+   --p1: #51289e
+   --p2: #641cd9
+   --y0: #ffc34c
+   --y1: #ffedc8
+   --txt: #ffe;
+}
+
+body {
+   background-color: var(--bg);
+   color: var(--txt);
+   margin: 0;
 }
 
 nav {
    display: flex;
    flex-direction: row;
+   background-color: var(--bg);
 }
 
 .navlink {
 
+}
+
+.projrow {
+   display: flex;
+}
+
+.proj {
+
+}
+
+main {
+   display: flex;
+   flex-direction: column;
+   width: 100vw;
+   align-items:center;
+}
+
+.page {
+   width: 60vw;
+   background-color: var(--bg);
 }
