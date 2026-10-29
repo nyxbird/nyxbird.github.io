@@ -1,0 +1,14 @@
+:root {
+   --bg0: #112;
+   --bg1: #324;
+   --bg2: #537; 
+}
+
+nav {
+   display: flex;
+   flex-direction: row;
+}
+
+.navlink {
+
+}
