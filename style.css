@@ -1,27 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,100..900,0..100,0..1;1,9..144,100..900,0..100,0..1&display=swap');
+
 :root {
-   --bg: #232323 
-   --p0: #403463
-   --p1: #51289e
-   --p2: #641cd9
-   --y0: #ffc34c
-   --y1: #ffedc8
-   --txt: #ffe;
+   --bg0: #232125;
+   --bg1: #45404a;
+   --p0: #403463;
+   --p1: #51289e;
+   --p2: #641cd9;
+   --ym: #ffc34c;
+   --yl: #ffedc8;
+   --w0: #eee;
+   --wy: #ffc;
+   --wp: #dcf;
+   --wg: #ccc;
 }
 
 body {
-   background-color: var(--bg);
-   color: var(--txt);
+   background-color: var(--bg0);
+   color: var(--w0);
    margin: 0;
+   font-family: "Fraunces", serif;
+   font-size: 1.5em;
+   font-optical-sizing: auto;
+   font-weight: 300;
+   font-style: normal;
+   font-variation-settings:
+     "SOFT" 1,
+     "WONK" 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+   font-variation-settings: "WONK" 1;
+   margin: 0;
+   color: var(--wp);
+}
+
+/* h1, h2, h3, h4, h5, h6 {
+   color:var(--wp);
+} */
+
+.proj>a {
+   text-decoration: none;
+   color: var(--w0);
+}
+
+.proj>a>h3 {
+   color: var(--wp);
+   transition: color .2s ease-in-out;
+}
+
+.proj:hover>a>h3 {
+   color: var(--wy);
+}
+
+em, a {
+   color: var(--wy);
+}
+
+.navlink {
+   text-decoration: none;
+}
+
+.navdiv {
+   margin: 0;
+}
+
+.trigram {
+   color: var(--wp);
+   font-weight: 900;
+}
+
+.grayed {
+   color: var(--wg);
+}
+
+p {
+   margin: 0;
+}
+
+a:hover:not(.proj>*) {
+   font-weight: 600;
+}
+
+.proj>a:hover {
+   font-weight: 400;
+}
+
+a, a:hover {
+   transition: font-weight 0.2s ease-in-out;
+}
+
+.proj:hover>h3 {
+   color: var(--wy);
+   transition: color 0.2s ease-in-out;
+}
+
+section {
+   margin-bottom: 1em;
+}
+
+.proj {
+   padding: 0.5em;
 }
 
 nav {
    display: flex;
    flex-direction: row;
    background-color: var(--bg);
-}
-
-.navlink {
-
+   gap: 0.5em;
+   justify-content: center;
 }
 
 .projrow {
@@ -41,5 +127,11 @@ main {
 
 .page {
    width: 60vw;
-   background-color: var(--bg);
+   background-color: var(--bg0);
+   /* box-shadow: 0 0 5px black; */
+   /* clip-path: inset(0 -5px 0 -5px); */
+   padding: 1em;
+   border-style: none solid;
+   border-width: 1px;
+   border-color: var(--bg1); 
 }
