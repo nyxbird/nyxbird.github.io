@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,100..900,0..100,0..1;1,9..144,100..900,0..100,0..1&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,100..900,0..100,0..1;1,9..144,100..900,0..100,0..1&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&display=swap');
 :root {
    --bg0: #232125;
    --bg1: #45404a;
@@ -43,11 +42,13 @@ nav>p>a {
    color: var(--w0);
 }
 
+/* trigram */
 nav>p>a:first-child {
+   font-family: "Noto Serif Display", serif;
    color: var(--wp);
-   font-weight: 900;
+   font-weight: 600;
    transition: color .2s ease-in-out;
-
+   transition: font-weight .2s ease-in-out;
 }
 
 nav>p>a:first-child:hover {
@@ -93,9 +94,10 @@ em, strong, a {
 
 .navdiv {
    margin: 0;
+   font-weight: 900;
 }
 
-.trigram {
+/* .trigram {
    color: var(--wp);
    font-weight: 900;
    text-decoration: none;
@@ -105,7 +107,7 @@ em, strong, a {
 .trigram:hover {
    color: var(--wy);
    font-weight: 1200;
-}
+} */
 
 
 .grayed {
@@ -116,7 +118,7 @@ p {
    margin: 0;
 }
 
-a:hover:not(.trigram,.proj>*) {
+a:hover:not(.proj>*) {
    font-weight: 600;
 }
 
@@ -149,12 +151,9 @@ nav {
    justify-content: center;
 }
 
-.projrow {
-   display: flex;
-}
-
-.proj {
-
+.projs {
+   display: grid;
+   grid-template-columns: repeat(2, auto);
 }
 
 main {
@@ -165,7 +164,7 @@ main {
 }
 
 .page {
-   width: 60vw;
+   width: 65vw;
    background-color: var(--bg0);
    /* box-shadow: 0 0 5px black; */
    /* clip-path: inset(0 -5px 0 -5px); */
@@ -173,4 +172,14 @@ main {
    border-style: none solid;
    border-width: 1px;
    border-color: var(--bg1); 
+}
+
+@media (max-width: 768px) {
+   .page {
+      width: 80vw;
+      border-style: none;
+   }
+   .projs {
+      grid-template-columns: repeat(1, auto);
+   }
 }
